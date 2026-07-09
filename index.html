@@ -1428,7 +1428,7 @@ cepRow.addEventListener('click', async () => {
     cta.classList.add('ready', 'pulse');
     cta.disabled = false;
     closeBtn.classList.add('ready');
-    ctaLabel.textContent = 'Quero assinar agora →';
+    ctaLabel.textContent = 'Quero assinar agora';
   }
 
   function closeModal(){
@@ -1443,7 +1443,7 @@ cepRow.addEventListener('click', async () => {
 
   cta.addEventListener('click', () => {
     if (cta.disabled) return;
-    window.location.href = 'https://allu-five.vercel.app/catalogo';
+    window.location.href = 'https://allu-five.vercel.app/';
   });
 
   window.addEventListener('load', () => setTimeout(openModal, 400));
