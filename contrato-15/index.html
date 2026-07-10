@@ -279,8 +279,8 @@
         <h2 style="font-size:26px;margin:0 0 6px;">iPhone 15</h2>
         <p style="color:var(--muted);font-size:14.5px;line-height:1.6;margin:0 0 6px;">Chip A16 Bionic com GPU de 5 núcleos e sistema avançado de câmera dupla. Acompanha carregador, película e capinha.</p>
         <div class="price-tag">
-          <span class="price-old">R$ 459,90</span>
-          <span class="price-new">R$ 350,55</span>
+          <span class="price-old">R$ 215,07</span>
+          <span class="price-new">R$ 105,60</span>
           <span class="price-unit">/ mês</span>
         </div>
         <ul class="spec-list">
@@ -307,7 +307,7 @@
         <h3>Comece pagando só a 1ª parcela</h3>
         <p style="color:var(--muted);font-size:13.5px;margin:0;">A allu cobre sua 2ª parcela e adia a 3ª por 90 dias. Frete grátis para todo o país.</p>
         <ul>
-          <li>Pague R$ 350,55 hoje</li>
+          <li>Pague R$ 105,60 hoje</li>
           <li>2ª parcela: coberta pela allu</li>
           <li>3ª parcela: cobrada em até 90 dias</li>
           <li>Frete: grátis, sem custo adicional</li>
@@ -526,8 +526,8 @@
       : 'Opção 2 — frete pago agora, 1ª parcela em 30 dias';
     document.getElementById('planNameDoc').textContent = planName;
     document.getElementById('planScheduleDoc').textContent = state.plan === '1'
-      ? 'Hoje: R$ 350,55 (1ª parcela). Em 30 dias: 2ª parcela coberta pela allu, sem cobrança. Em até 90 dias: 3ª parcela de R$ 350,55. Frete: grátis, incluso.'
-      : 'Hoje: valor do frete, calculado no checkout. Em até 30 dias: 1ª parcela de R$ 350,55. Parcelas seguintes: mensais, no mesmo valor.';
+      ? 'Hoje: R$ 105,60 (1ª parcela). Em 30 dias: 2ª parcela coberta pela allu, sem cobrança. Em até 90 dias: 3ª parcela de R$ 105,60. Frete: grátis, incluso.'
+      : 'Hoje: valor do frete, calculado no checkout. Em até 30 dias: 1ª parcela de R$ 105,60. Parcelas seguintes: mensais, no mesmo valor.';
     goTo('4');
   });
 
@@ -549,7 +549,7 @@
     document.getElementById('payerName').textContent = firstName;
     document.getElementById('paySigned').textContent = state.signature;
     document.getElementById('payPlan').textContent = state.plan === '1' ? 'Opção 1' : 'Opção 2';
-    document.getElementById('payToday').textContent = state.plan === '1' ? 'R$ 350,55' : 'Valor do frete (calculado no checkout)';
+    document.getElementById('payToday').textContent = state.plan === '1' ? 'R$ 105,60' : 'Valor do frete (calculado no checkout)';
     document.getElementById('destinoLabel').textContent = state.plan === '1' ? 'checkout Opção 1' : 'checkout Opção 2';
     goTo('5');
   });
