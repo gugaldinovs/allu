@@ -559,16 +559,8 @@
     const destino = CHECKOUT_URLS[state.plan];
     e.target.textContent = 'Redirecionando…';
     e.target.disabled = true;
-    setTimeout(() => {
-      e.target.parentElement.querySelector('.spec-list').style.display = 'none';
-      e.target.style.display = 'none';
-      e.target.parentElement.querySelector('.fineprint').style.display = 'none';
-      document.getElementById('btnGoPay').addEventListener('click', (e) => {
-  const destino = CHECKOUT_URLS[state.plan];
-  e.target.textContent = 'Redirecionando…';
-  e.target.disabled = true;
-  if(destino) window.location.href = destino;
-});
+    if(destino) window.location.href = destino;
+  });
 
   showView('1');
 })();
