@@ -560,15 +560,7 @@
     const destino = CHECKOUT_URLS[state.plan];
     e.target.textContent = 'Redirecionando…';
     e.target.disabled = true;
-    setTimeout(() => {
-      e.target.parentElement.querySelector('.spec-list').style.display = 'none';
-      e.target.style.display = 'none';
-      e.target.parentElement.querySelector('.fineprint').style.display = 'none';
-      document.getElementById('confirmDone').style.display = 'block';
-      // Em produção: window.location.href = destino;
-      // Deixado como window.open neste protótipo para não sair da demonstração.
-      if(destino) window.open(destino, '_blank');
-    }, 1200);
+    if(destino) window.location.href = destino;
   });
 
   showView('1');
