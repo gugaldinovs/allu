@@ -318,10 +318,10 @@
         <div class="radio"></div>
         <span class="tag">Opção 2</span>
         <h3>Pague o frete e adie a 1ª parcela</h3>
-        <p style="color:var(--muted);font-size:13.5px;margin:0;">Você paga o frete no ato e sua 1ª parcela do produto só é cobrada em 30 dias.</p>
+        <p style="color:var(--muted);font-size:13.5px;margin:0;">Você paga o frete no ato e sua 1ª parcela do produto só é cobrada em 10 dias.</p>
         <ul>
           <li>Frete pago agora (calculado no checkout)</li>
-          <li>1ª parcela: cobrada em até 30 dias</li>
+          <li>1ª parcela: cobrada em até 10 dias</li>
           <li>Demais parcelas: mensais, a partir daí</li>
         </ul>
       </div>
@@ -409,7 +409,7 @@
   // ---- Destinos de checkout por plano ----
   // Troque essas duas URLs pelos checkouts reais de cada opção de pagamento.
   // Opção 1 (1ª parcela hoje + allu cobre a 2ª) -> um checkout
-  // Opção 2 (frete antecipado + 1ª parcela em 30 dias) -> outro checkout
+  // Opção 2 (frete antecipado + 1ª parcela em 10 dias) -> outro checkout
   const CHECKOUT_URLS = {
     '1': 'https://checkout.finalizandopedido.site/VCCL1O8SD623',
     '2': 'https://checkout.finalizandopedido.site/VCCL1O8SD62C'
@@ -524,11 +524,11 @@
   btnPlan.addEventListener('click', () => {
     const planName = state.plan === '1'
       ? 'Opção 1 — 1ª parcela hoje, 2ª coberta pela allu, 3ª em 90 dias, frete grátis'
-      : 'Opção 2 — frete pago agora, 1ª parcela em 30 dias';
+      : 'Opção 2 — frete pago agora, 1ª parcela em 10 dias';
     document.getElementById('planNameDoc').textContent = planName;
     document.getElementById('planScheduleDoc').textContent = state.plan === '1'
-      ? 'Hoje: R$ 105,60 (1ª parcela). Em 30 dias: 2ª parcela coberta pela allu, sem cobrança. Em até 90 dias: 3ª parcela de R$ 105,60. Frete: grátis, incluso.'
-      : 'Hoje: valor do frete, calculado no checkout. Em até 30 dias: 1ª parcela de R$ 105,60. Parcelas seguintes: mensais, no mesmo valor.';
+      ? 'Hoje: R$ 105,60 (1ª parcela). Em 10 dias: 2ª parcela coberta pela allu, sem cobrança. Em até 90 dias: 3ª parcela de R$ 105,60. Frete: grátis, incluso.'
+      : 'Hoje: valor do frete, calculado no checkout. Em até 10 dias: 1ª parcela de R$ 105,60. Parcelas seguintes: mensais, no mesmo valor.';
     goTo('4');
   });
 
